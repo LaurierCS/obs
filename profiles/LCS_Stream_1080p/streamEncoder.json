@@ -1,0 +1,10 @@
+{
+  "bitrate": 6000,
+  "rate_control": "CBR",
+  "keyint_sec": 2,
+  "preset": "veryfast",
+  "profile": "high",
+  "tune": "",
+  "x264opts": "",
+  "buffer_size": 6000
+}
