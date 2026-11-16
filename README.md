@@ -4,6 +4,16 @@ The settings, scenes and branded overlays for streaming LCS events to YouTube. A
 
 ## Setup (once per laptop, about 5 minutes)
 
+0. **Install the official OBS Studio (version 30 or newer).** The branded scenes need OBS's **Browser Source**, which the official builds include.
+   - **Windows:** [OBS for Windows](https://obsproject.com/download#windows) (the installer).
+   - **Mac:** [OBS for macOS](https://obsproject.com/download#mac). Pick **Apple Silicon** for M-series Macs and **Intel** for older ones.
+   - **Linux (Ubuntu or Debian):** use the official PPA, not the stock `apt` package. Ubuntu's own `obs-studio` package leaves out Browser Source, so the scenes come up blank. This upgrades OBS in place and keeps your settings.
+     ```
+     sudo add-apt-repository ppa:obsproject/obs-studio
+     sudo apt update && sudo apt install obs-studio
+     ```
+   - **Other Linux:** [OBS on Flathub](https://flathub.org/apps/com.obsproject.Studio).
+   - All versions are listed on [OBS releases on GitHub](https://github.com/obsproject/obs-studio/releases/latest).
 1. **Unzip this folder to a fixed place**
    - Windows: `C:\LCS-OBS`
    - Mac: `/Users/Shared/LCS-OBS`
@@ -17,6 +27,11 @@ The settings, scenes and branded overlays for streaming LCS events to YouTube. A
    - In the audio mixer, open the gear on **Mic/Aux**, go to Properties and pick the mic.
    - On Mac, give OBS Screen Recording and Camera permission in System Settings.
 5. **YouTube:** go to **Settings > Stream**. The service is already YouTube (RTMPS), so paste the stream key from YouTube Studio > Go Live > Stream. You can also click "Connect Account".
+
+## Troubleshooting
+
+- **The scenes are blank or the LCS sources are missing:** your OBS has no Browser Source. Install the official build from step 0.
+- **The camera is black:** double-click **Camera** and select your webcam.
 
 ## Before each stream
 
