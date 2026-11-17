@@ -35,7 +35,7 @@ The settings, scenes and branded overlays for streaming LCS events to YouTube. A
 
 ## Before each stream
 
-- Edit `overlays/config.js` to set the event title, start time, speaker name, room and the next event.
+- Edit `overlays/config.js` to set the event title, start time, room and the next event.
 - In OBS, right-click each **LCS |** source and pick **Refresh**, or restart OBS.
 - The countdown counts to `start`, for example `"19:30"`. If `start` is empty, it uses `minutes`. If both are empty, it counts to the next :00 or :30.
 
@@ -44,12 +44,11 @@ The settings, scenes and branded overlays for streaming LCS events to YouTube. A
 | Scene | What it's for |
 |---|---|
 | 1. Starting Soon | Countdown with branding and mascots. Put it up about 10 minutes before. |
-| 2. Screen + Cam | Full-screen share with the camera in the bottom-right corner. This is the default for talks and reviews. |
-| 3. Screen + Cam (Framed) | Branded frame with the screen, camera top-right, title and links. Good for slides. |
-| 4. Speaker (Cam Full) | Full camera with a name lower-third. Use it for intros, panels and Q&A. |
-| 5. Screen Only | The screen share with no camera or branding. |
-| 6. Be Right Back | Breaks. |
-| 7. Thanks for Watching | Outro with the next event and links. |
+| 2. Screen + Cam | Full-screen share with the camera in the bottom-right corner, no frame, so you can drag and resize it to fit any webcam. This is the default for talks and reviews. |
+| 3. Speaker (Cam Full) | Full-screen camera with no overlay. Use it for intros, panels and Q&A. |
+| 4. Screen Only | The screen share with no camera or branding. |
+| 5. Be Right Back | Breaks. |
+| 6. Thanks for Watching | Outro with the next event and links. |
 
 The mic has noise suppression (RNNoise) and a limiter already applied.
 

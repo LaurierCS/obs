@@ -63,21 +63,17 @@ def build(os_key, base):
         browser("LCS | Starting Soon", "starting.html", restart=True),
         browser("LCS | Be Right Back", "brb.html"),
         browser("LCS | Thanks for Watching", "ending.html"),
-        browser("LCS | Screen Overlay", "screen-full.html"),
-        browser("LCS | Framed Background", "screen-framed.html"),
-        browser("LCS | Speaker Lower Third", "speaker.html"),
         source("Screen", p["display"], p["display_settings"], mixers=255),
         source("Camera", p["cam"], {}, mixers=255),
     ]
     camx, camy, camw, camh = 1504, 812, 384, 216
     scenes = [
         scene("1. Starting Soon", [("LCS | Starting Soon",)]),
-        scene("2. Screen + Cam", [("Screen", 0, 0, W, H, 2), ("Camera", camx, camy, camw, camh, 2), ("LCS | Screen Overlay",)]),
-        scene("3. Screen + Cam (Framed)", [("LCS | Framed Background",), ("Screen", 40, 40, 1440, 810, 2), ("Camera", 1520, 40, 360, 203, 2)]),
-        scene("4. Speaker (Cam Full)", [("Camera", 0, 0, W, H, 3), ("LCS | Speaker Lower Third",)]),
-        scene("5. Screen Only", [("Screen", 0, 0, W, H, 2)]),
-        scene("6. Be Right Back", [("LCS | Be Right Back",)]),
-        scene("7. Thanks for Watching", [("LCS | Thanks for Watching",)]),
+        scene("2. Screen + Cam", [("Screen", 0, 0, W, H, 2), ("Camera", camx, camy, camw, camh, 2)]),
+        scene("3. Speaker (Cam Full)", [("Camera", 0, 0, W, H, 3)]),
+        scene("4. Screen Only", [("Screen", 0, 0, W, H, 2)]),
+        scene("5. Be Right Back", [("LCS | Be Right Back",)]),
+        scene("6. Thanks for Watching", [("LCS | Thanks for Watching",)]),
     ]
     mic = source("Mic/Aux", p["mic"], {"device_id": "default"}, filters=[noise, limiter])
     mic["hotkeys"] = {}
